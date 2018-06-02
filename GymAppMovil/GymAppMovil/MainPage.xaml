@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GymAppMovil"
+             x:Class="GymAppMovil.MainPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="5,15">
+                <Label
+                    VerticalOptions="StartAndExpand"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    Text="GymAppMovil">
+                </Label>
+
+                <Grid
+                    Margin="10,0"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        VerticalTextAlignment="Center"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        Text="Usuario">
+                    </Label>
+                    <Entry                        
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        FontSize="Small"
+                        Placeholder="Ingrese su usuario..."
+                        PlaceholderColor="LightGray"
+                        Keyboard="Email"
+                        Text="">
+                    </Entry>
+
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        VerticalTextAlignment="Center"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        Text="Password">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        FontSize="Small"
+                        Placeholder="Ingrese su password..."
+                        PlaceholderColor="LightGray"
+                        IsPassword="True"
+                        Text="">
+                    </Entry>
+                </Grid>
+
+                <ActivityIndicator
+                    VerticalOptions="CenterAndExpand"
+                    Color="Blue">
+                </ActivityIndicator>
+
+                <StackLayout
+                    VerticalOptions="CenterAndExpand"
+                    Margin="10,0"
+                    Orientation="Horizontal">
+                    <Label                        
+                        FontAttributes="Italic"
+                        VerticalTextAlignment="Center"                        
+                        Text="Recordarme en este dispositivo...">
+                    </Label>
+                    <Switch
+                        IsToggled="True"
+                        HorizontalOptions="EndAndExpand">
+                    </Switch>
+                </StackLayout>
+
+                <Label
+                    VerticalOptions="CenterAndExpand"
+                    FontAttributes="Italic"
+                    TextColor="Blue"
+                    HorizontalTextAlignment="Center"
+                    Text="Olvido su Password?">
+                </Label>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                    <Button
+                        BackgroundColor="Navy"
+                        BorderRadius="25"                        
+                        HeightRequest="55"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="White"
+                        IsEnabled="True"
+                        Command=""
+                        Text=" Ingresar ">
+                    </Button>
+                    <Button
+                        BackgroundColor="MediumPurple"
+                        BorderRadius="25"                        
+                        HeightRequest="55"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="White"
+                        IsEnabled="True"
+                        Text="Registrar">
+                    </Button>
+                </StackLayout>
+
+                <StackLayout                    
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand">                    
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
