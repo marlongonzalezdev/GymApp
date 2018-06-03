@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:GymAppMovil"
-             x:Class="GymAppMovil.MainPage">
-
+             x:Class="GymAppMovil.Views.LoginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Login">
     <ContentPage.Content>
         <ScrollView>
+            
             <StackLayout
                 Padding="5,15">
                 <Label
@@ -15,9 +16,15 @@
                     HorizontalTextAlignment="Center"
                     Text="GymAppMovil">
                 </Label>
+                
+                <Image
+                    WidthRequest="200"
+                    VerticalOptions="CenterAndExpand"
+                    Source="gym">                    
+                </Image>
 
                 <Grid
-                    Margin="10,0"
+                    Margin="10,10"
                     VerticalOptions="CenterAndExpand">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -59,12 +66,7 @@
                         IsPassword="True"
                         Text="">
                     </Entry>
-                </Grid>
-
-                <ActivityIndicator
-                    VerticalOptions="CenterAndExpand"
-                    Color="Blue">
-                </ActivityIndicator>
+                </Grid>                
 
                 <StackLayout
                     VerticalOptions="CenterAndExpand"
@@ -72,7 +74,8 @@
                     Orientation="Horizontal">
                     <Label                        
                         FontAttributes="Italic"
-                        VerticalTextAlignment="Center"                        
+                        FontSize="Medium"
+                        VerticalTextAlignment="Center"
                         Text="Recordarme en este dispositivo...">
                     </Label>
                     <Switch
@@ -81,14 +84,6 @@
                     </Switch>
                 </StackLayout>
 
-                <Label
-                    VerticalOptions="CenterAndExpand"
-                    FontAttributes="Italic"
-                    TextColor="Blue"
-                    HorizontalTextAlignment="Center"
-                    Text="Olvido su Password?">
-                </Label>
-
                 <StackLayout
                     Orientation="Horizontal"
                     HorizontalOptions="CenterAndExpand"
@@ -96,8 +91,8 @@
                     <Button
                         BackgroundColor="Navy"
                         BorderRadius="25"                        
-                        HeightRequest="55"
-                        HorizontalOptions="FillAndExpand"
+                        HeightRequest="50"
+                        WidthRequest="150"        
                         TextColor="White"
                         IsEnabled="True"
                         Command=""
@@ -106,22 +101,15 @@
                     <Button
                         BackgroundColor="MediumPurple"
                         BorderRadius="25"                        
-                        HeightRequest="55"
-                        HorizontalOptions="FillAndExpand"
+                        HeightRequest="50"
+                        WidthRequest="150"
                         TextColor="White"
                         IsEnabled="True"
                         Text="Registrar">
                     </Button>
                 </StackLayout>
-
-                <StackLayout                    
-                    Orientation="Horizontal"
-                    HorizontalOptions="Center"
-                    VerticalOptions="EndAndExpand">                    
-                </StackLayout>
-
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
-
 </ContentPage>

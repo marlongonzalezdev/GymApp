@@ -156,4 +156,7 @@
       <Name>GymAppMovil</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gym.png" />
+  </ItemGroup>
 </Project>
