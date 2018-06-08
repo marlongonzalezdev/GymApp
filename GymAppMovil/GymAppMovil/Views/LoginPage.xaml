@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GymAppMovil.Views.LoginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Login">
+    <ContentPage.Content>
+        <ScrollView>
+            
+            <StackLayout
+                Padding="5,15">
+                <Label
+                    VerticalOptions="StartAndExpand"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    Text="GymAppMovil">
+                </Label>
+                
+                <Image
+                    WidthRequest="200"
+                    VerticalOptions="CenterAndExpand"
+                    Source="gym">                    
+                </Image>
+
+                <Grid
+                    Margin="10,10"
+                    VerticalOptions="CenterAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        VerticalTextAlignment="Center"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        Text="Usuario">
+                    </Label>
+                    <Entry                        
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        FontSize="Small"
+                        Placeholder="Ingrese su usuario..."
+                        PlaceholderColor="LightGray"
+                        Keyboard="Email"
+                        Text="">
+                    </Entry>
+
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        VerticalTextAlignment="Center"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        Text="Password">
+                    </Label>
+                    <Entry
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        FontSize="Small"
+                        Placeholder="Ingrese su password..."
+                        PlaceholderColor="LightGray"
+                        IsPassword="True"
+                        Text="">
+                    </Entry>
+                </Grid>                
+
+                <StackLayout
+                    VerticalOptions="CenterAndExpand"
+                    Margin="10,0"
+                    Orientation="Horizontal">
+                    <Label                        
+                        FontAttributes="Italic"
+                        FontSize="Medium"
+                        VerticalTextAlignment="Center"
+                        Text="Recordarme en este dispositivo...">
+                    </Label>
+                    <Switch
+                        IsToggled="True"
+                        HorizontalOptions="EndAndExpand">
+                    </Switch>
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                    <Button
+                        BackgroundColor="Navy"
+                        BorderRadius="25"                        
+                        HeightRequest="50"
+                        WidthRequest="150"        
+                        TextColor="White"
+                        IsEnabled="True"
+                        Command=""
+                        Text=" Ingresar ">
+                    </Button>
+                    <Button
+                        BackgroundColor="MediumPurple"
+                        BorderRadius="25"                        
+                        HeightRequest="50"
+                        WidthRequest="150"
+                        TextColor="White"
+                        IsEnabled="True"
+                        Text="Registrar">
+                    </Button>
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
