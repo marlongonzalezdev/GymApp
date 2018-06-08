@@ -481,5 +481,17 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:GymAppRestService.Controllers.UserManagementController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GymAppRestService.Controllers.UserManagementController.GetUser(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <param name="password"></param>
+        </member>
     </members>
 </doc>
