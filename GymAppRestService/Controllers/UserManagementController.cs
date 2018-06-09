@@ -26,10 +26,11 @@ namespace GymAppRestService.Controllers
         /// <param name="password"></param>
         [HttpGet]
         [Route("GetUser")]
-        public void GetUser(string user, string password)
+        public HttpResponseMessage GetUser(string user, string password)
         {
-            IEnumerable<User> result = _repo.GetAll<User>();
-            Console.WriteLine(result);
+            var result = _repo.GetFirst<User>(s => s.Name == "Nestor");
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+            return response;
         }
     }
 }

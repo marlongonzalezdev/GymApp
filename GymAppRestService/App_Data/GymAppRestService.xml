@@ -530,5 +530,15 @@
             <param name="user"></param>
             <param name="password"></param>
         </member>
+        <member name="T:GymAppRestService.CustomResponseHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:GymAppRestService.ResponseMetadata">
+            <summary>
+            
+            </summary>
+        </member>
     </members>
 </doc>
