@@ -4,6 +4,43 @@
         <name>GymAppRestService</name>
     </assembly>
     <members>
+        <member name="T:GymAppRestService.UnityConfig">
+            <summary>
+            Specifies the Unity configuration for the main container.
+            </summary>
+        </member>
+        <member name="P:GymAppRestService.UnityConfig.Container">
+            <summary>
+            Configured Unity Container.
+            </summary>
+        </member>
+        <member name="M:GymAppRestService.UnityConfig.RegisterTypes(Unity.IUnityContainer)">
+            <summary>
+            Registers the type mappings with the Unity container.
+            </summary>
+            <param name="container">The unity container to configure.</param>
+            <remarks>
+            There is no need to register concrete types such as controllers or
+            API controllers (unless you want to change the defaults), as Unity
+            allows resolving a concrete type even if it was not previously
+            registered.
+            </remarks>
+        </member>
+        <member name="T:GymAppRestService.UnityWebApiActivator">
+            <summary>
+            Provides the bootstrapping for integrating Unity with WebApi when it is hosted in ASP.NET.
+            </summary>
+        </member>
+        <member name="M:GymAppRestService.UnityWebApiActivator.Start">
+            <summary>
+            Integrates Unity when the application starts.
+            </summary>
+        </member>
+        <member name="M:GymAppRestService.UnityWebApiActivator.Shutdown">
+            <summary>
+            Disposes the Unity container when the application is shut down.
+            </summary>
+        </member>
         <member name="M:GymAppRestService.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>
             Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"

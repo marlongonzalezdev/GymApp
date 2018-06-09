@@ -14,6 +14,11 @@ namespace GymAppRestService.Controllers
     /// </summary>
     public class UserManagementController : ApiController
     {
+        private readonly IGenericRepository _repo;
+        public UserManagementController(IGenericRepository repo)
+        {
+            _repo = repo;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -23,10 +28,7 @@ namespace GymAppRestService.Controllers
         [Route("GetUser")]
         public void GetUser(string user, string password)
         {
-
-            GymAppDBEntities context = new GymAppDBEntities();
-            IGenericRepository repo = new EntityFrameworkRepository<DbContext>(context);
-            IEnumerable<User> result = repo.GetAll<User>();
+            IEnumerable<User> result = _repo.GetAll<User>();
             Console.WriteLine(result);
         }
     }
