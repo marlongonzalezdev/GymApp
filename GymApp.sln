@@ -9,6 +9,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "GymAppDB", "GymAppDB\GymApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{2204B46C-7285-4AEF-9977-AA943ECF6C05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{42EEE3FC-CCB4-4282-8142-D0FDEA9F378F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{2204B46C-7285-4AEF-9977-AA943ECF6C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2204B46C-7285-4AEF-9977-AA943ECF6C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2204B46C-7285-4AEF-9977-AA943ECF6C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42EEE3FC-CCB4-4282-8142-D0FDEA9F378F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EEE3FC-CCB4-4282-8142-D0FDEA9F378F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EEE3FC-CCB4-4282-8142-D0FDEA9F378F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EEE3FC-CCB4-4282-8142-D0FDEA9F378F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
