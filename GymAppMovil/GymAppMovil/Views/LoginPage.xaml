@@ -3,11 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GymAppMovil.Views.LoginPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="Login">
+             Title="GYM BIT">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView
+            BackgroundColor="White"
+            VerticalOptions="CenterAndExpand"
+            BindingContext="{Binding Login}">
             
             <StackLayout
+                VerticalOptions="CenterAndExpand"
                 Padding="5,15">
                 <Label
                     VerticalOptions="StartAndExpand"
@@ -23,8 +27,7 @@
                     Source="gym">                    
                 </Image>
 
-                <Grid
-                    Margin="10,10"
+                <Grid                    
                     VerticalOptions="CenterAndExpand">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -35,42 +38,40 @@
                         Grid.Column="0"
                         Grid.Row="0"
                         VerticalTextAlignment="Center"
-                        FontSize="Medium"
+                        FontSize="Default"
                         FontAttributes="Bold"
                         Text="Usuario">
                     </Label>
                     <Entry                        
                         Grid.Column="1"
                         Grid.Row="0"
-                        FontSize="Small"
+                        FontSize="Default"
                         Placeholder="Ingrese su usuario..."
-                        PlaceholderColor="LightGray"
-                        Keyboard="Email"
-                        Text="">
+                        PlaceholderColor="LightGray"                        
+                        Text="{Binding User, Mode=TwoWay}">
                     </Entry>
 
                     <Label
                         Grid.Column="0"
                         Grid.Row="1"
                         VerticalTextAlignment="Center"
-                        FontSize="Medium"
+                        FontSize="Default"
                         FontAttributes="Bold"
                         Text="Password">
                     </Label>
                     <Entry
                         Grid.Column="1"
                         Grid.Row="1"
-                        FontSize="Small"
+                        FontSize="Default"
                         Placeholder="Ingrese su password..."
                         PlaceholderColor="LightGray"
                         IsPassword="True"
-                        Text="">
+                        Text="{Binding Password, Mode=TwoWay}">
                     </Entry>
                 </Grid>                
 
                 <StackLayout
-                    VerticalOptions="CenterAndExpand"
-                    Margin="10,0"
+                    VerticalOptions="CenterAndExpand"                    
                     Orientation="Horizontal">
                     <Label                        
                         FontAttributes="Italic"
@@ -79,7 +80,7 @@
                         Text="Recordarme en este dispositivo...">
                     </Label>
                     <Switch
-                        IsToggled="True"
+                        IsToggled="{Binding IsRemember, Mode=TwoWay}"
                         HorizontalOptions="EndAndExpand">
                     </Switch>
                 </StackLayout>
@@ -94,8 +95,8 @@
                         HeightRequest="50"
                         WidthRequest="150"        
                         TextColor="White"
-                        IsEnabled="True"
-                        Command=""
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                        Command="{Binding LoginCommand}"
                         Text=" Ingresar ">
                     </Button>
                     <Button
@@ -104,7 +105,8 @@
                         HeightRequest="50"
                         WidthRequest="150"
                         TextColor="White"
-                        IsEnabled="True"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                        Command="{Binding RegisterCommand}"
                         Text="Registrar">
                     </Button>
                 </StackLayout>
