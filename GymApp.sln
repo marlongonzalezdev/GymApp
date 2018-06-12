@@ -9,6 +9,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "GymAppDB", "GymAppDB\GymApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{2204B46C-7285-4AEF-9977-AA943ECF6C05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{42EEE3FC-CCB4-4282-8142-D0FDEA9F378F}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GymAppMovil", "GymAppMovil\GymAppMovil\GymAppMovil.csproj", "{8234B3C0-FDF4-4461-9B0D-56DDF3F3F906}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymAppMovil.Android", "GymAppMovil\GymAppMovil.Android\GymAppMovil.Android.csproj", "{5C935075-7A89-49A8-9A1C-743A0B5672CD}"
