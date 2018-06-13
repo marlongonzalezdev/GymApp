@@ -5,6 +5,7 @@
     using System;
     using System.Windows.Input;
     using Xamarin.Forms;
+    using Services;
 
     public class LoginViewModel : BaseViewModel
     {        
@@ -61,9 +62,15 @@
         #region Constructor
         public LoginViewModel()
         {
+            this.apiService = new ApiService();            
             this.IsRemember = true;
             this.IsEnabled = true;
-        }        
+        }
+        
+        #endregion
+
+        #region Services
+        private ApiService apiService;
         #endregion
 
         #region Methods
@@ -89,13 +96,39 @@
 
             this.IsEnabled = false;
 
-            if (this.User != "nestor" || this.Password !="1234")
+            var connection = await this.apiService.CheckConnection();
+
+            if (!connection.IsSuccess)
             {
                 this.IsEnabled = true;
 
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
-                    "Usuario ó Password incorrecto...",
+                    connection.Message,
+                    "Aceptar");
+                return;
+            }            
+
+            var token = await this.apiService.GetAccess("http://192.168.1.5:45455", this.User, this.Password);
+
+            if (token == null)
+            {
+                IsEnabled = true;
+
+                await Application.Current.MainPage.DisplayAlert(
+                    "Error",
+                    "Intentelo nuevamente.",
+                    "Aceptar");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(token.AccessToken))
+            {
+                IsEnabled = true;
+
+                await Application.Current.MainPage.DisplayAlert(
+                    "Error",
+                    token.ErrorDescription,
                     "Aceptar");
 
                 this.Password = string.Empty;

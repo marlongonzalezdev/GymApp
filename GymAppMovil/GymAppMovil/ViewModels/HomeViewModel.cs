@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GymAppMovil.ViewModels
 {
-    public class HomeViewModel
+    public class HomeViewModel : BaseViewModel
     {
     }
 }
