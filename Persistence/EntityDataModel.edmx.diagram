@@ -5,9 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="03cfc5b2a46b43daa65ff62a522d00c9" Name="Diagram1">
-        <EntityTypeShape EntityType="GymAppDBModel.Role" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="GymAppDBModel.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="GymAppDBModel.FK_User_Role" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GymAppDBModel.Role" Width="1.5" PointX="0.75" PointY="1.875" />
+        <EntityTypeShape EntityType="GymAppDBModel.User" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="GymAppDBModel.FK_User_Role" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

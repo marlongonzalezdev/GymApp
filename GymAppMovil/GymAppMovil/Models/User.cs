@@ -12,10 +12,10 @@ namespace GymAppMovil.Models
         public string Password { get; set; }
         public string Nickname { get; set; }
         public int Age { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public DateTime ModifiedDate { get; set; }
-        public DateTime CreatedBy { get; set; }
-        public DateTime ModifiedBy { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
+        public DateTime? CreatedBy { get; set; }
+        public DateTime? ModifiedBy { get; set; }
         public int RoleID { get; set; }
     }
 }

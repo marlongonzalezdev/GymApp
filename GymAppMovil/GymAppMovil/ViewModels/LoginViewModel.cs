@@ -109,7 +109,7 @@
                 return;
             }            
 
-            var token = await this.apiService.GetAccess("http://192.168.1.5:45455", this.User, this.Password);
+            var token = await this.apiService.GetUser(User, Password);
 
             if (token == null)
             {
@@ -122,19 +122,19 @@
                 return;
             }
 
-            if (string.IsNullOrEmpty(token.AccessToken))
-            {
-                IsEnabled = true;
+            //if (string.IsNullOrEmpty(token.AccessToken))
+            //{
+            //    IsEnabled = true;
 
-                await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    token.ErrorDescription,
-                    "Aceptar");
+            //    await Application.Current.MainPage.DisplayAlert(
+            //        "Error",
+            //        token.ErrorDescription,
+            //        "Aceptar");
 
-                this.Password = string.Empty;
+            //    this.Password = string.Empty;
 
-                return;
-            }
+            //    return;
+            //}
 
             this.IsEnabled = true;
             this.User = string.Empty;

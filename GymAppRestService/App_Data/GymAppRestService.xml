@@ -529,7 +529,7 @@
             </summary>
             <param name="repo"></param>
         </member>
-        <member name="M:GymAppRestService.Controllers.UserManagementController.GetUserAsync(System.String,System.String)">
+        <member name="M:GymAppRestService.Controllers.UserManagementController.GetUser(System.String,System.String)">
             <summary>
             Get user if exist
             </summary>
