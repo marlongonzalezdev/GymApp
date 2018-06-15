@@ -4,15 +4,17 @@
     [LastName]     NVARCHAR (100) NOT NULL,
     [Password]     NVARCHAR (MAX) NOT NULL,
     [Nickname]     NVARCHAR (50)  NOT NULL,
-    [Age]          INT            NOT NULL,
-    [CreatedDate]  DATETIME       NULL,
-    [ModifiedDate] DATETIME       NULL,
-    [CreatedBy]    DATETIME       NULL,
-    [ModifiedBy]   DATETIME       NULL,
+    [Birthday]     DATE           NOT NULL,
+    [CreatedDate]  DATETIME       NOT NULL,
+    [ModifiedDate] DATETIME       NOT NULL,
+    [CreatedBy]    NVARCHAR (50)  NOT NULL,
+    [ModifiedBy]   NVARCHAR (50)  NOT NULL,
     [RoleID]       INT            NOT NULL,
     CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED ([UserID] ASC),
     CONSTRAINT [FK_User_Role] FOREIGN KEY ([RoleID]) REFERENCES [dbo].[Role] ([RoleID])
 );
+
+
 
 
 
