@@ -19,9 +19,9 @@ namespace Persistence
         public string LastName { get; set; }
         public string Password { get; set; }
         public string Nickname { get; set; }
-        public Nullable<System.DateTime> Birthday { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
-        public Nullable<System.DateTime> ModifiedDate { get; set; }
+        public System.DateTime Birthday { get; set; }
+        public System.DateTime CreatedDate { get; set; }
+        public System.DateTime ModifiedDate { get; set; }
         public string CreatedBy { get; set; }
         public string ModifiedBy { get; set; }
         public int RoleID { get; set; }
